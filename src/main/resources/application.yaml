@@ -1,0 +1,8 @@
+spring:
+  kafka:
+    listener:
+      ack-mode: manual
+    consumer:
+      enable-auto-commit: false
+  application:
+    name: Notification Processor
