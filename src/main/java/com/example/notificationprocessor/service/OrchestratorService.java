@@ -11,4 +11,8 @@ public class OrchestratorService {
         System.out.println("Processing ingest event: " + ingestEvent);
         // For example, you can call other services, perform transformations, etc.
     }
+
+    public void processIngestEvent(String message) {
+        System.out.println("Processing ingest event string: " + message);
+    }
 }
