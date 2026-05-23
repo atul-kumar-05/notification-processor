@@ -17,9 +17,7 @@ public class IngestionEventConsumer {
 
     @KafkaListener(topics = "ingestion-events", groupId = "notification-processor-group")
     public void consume(IngestEvent ingestEvent, Acknowledgment acknowledgment) {
-        // Process the incoming message
         System.out.println("Consumed message: " + ingestEvent);
-        // Add your processing logic here
         try{
             orchestratorService.processIngestEvent(ingestEvent);
             acknowledgment.acknowledge(); // Acknowledge the message after successful processing
